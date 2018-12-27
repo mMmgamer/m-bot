@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const client2 = new Discord.Client();
+const client3 = new Discord.Client();
 
 client.on('ready', () => {
    console.log(`----------------`);
@@ -46,6 +47,24 @@ client2.on('message', message => {
 });
 
 client2.on('message', message => {
+    if(message.content === '-ريب'){
+        message.channel.send('#credits')
+    }
+});
+
+client3.on('message', message => {
+    if(message.content === '-راتب'){
+        message.channel.send('#daily')
+    }
+});
+
+client3.on('message', message => {
+    if(message.content === '-مبلغ'){
+        message.channel.send('#credits')
+    }
+});
+
+client3.on('message', message => {
     if(message.content === '-ريب'){
         message.channel.send('#credits')
     }
